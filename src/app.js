@@ -29,4 +29,7 @@ app.get("/songs", (req, res) => {
   res.send(title);
 });
 
+app.use((req, res, next) => {
+  res.send(`The route ${req.path} does not exist!`);
+});
 module.exports = app;
