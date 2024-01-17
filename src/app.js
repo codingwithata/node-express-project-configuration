@@ -11,4 +11,8 @@ app.use(morgan("dev"));
 
 app.get("/hello", sayHello);
 
+app.get("/hello/:name", (req, res) => {
+  res.send(`Hello ${req.params.name}`);
+});
+
 module.exports = app;
