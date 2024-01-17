@@ -9,6 +9,6 @@ const sayHello = (req, res, next) => {
 
 app.use(morgan("dev"));
 
-app.use("/", sayHello);
+app.get("/hello", sayHello);
 
 module.exports = app;
